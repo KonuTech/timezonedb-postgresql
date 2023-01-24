@@ -9,12 +9,6 @@ CREATE TABLE `time_zone` (
 	INDEX `idx_zone_name` (`zone_name`),
 	INDEX `idx_time_start` (`time_start`)
 ) COLLATE='utf8_bin' ENGINE=MyISAM;
+
 LOAD DATA LOCAL INFILE 'time_zone.csv' INTO TABLE `time_zone` FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
-DROP TABLE IF EXISTS `country`;
-CREATE TABLE `country` (
-	`country_code` CHAR(2) NULL,
-	`country_name` VARCHAR(45) NULL,
-	INDEX `idx_country_code` (`country_code`)
-) COLLATE='utf8_bin' ENGINE=MyISAM;
-LOAD DATA LOCAL INFILE 'country.csv' INTO TABLE `country` FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';

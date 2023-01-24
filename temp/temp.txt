@@ -1,0 +1,10 @@
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+
+.\venv\Scripts\activate
+
+
+SELECT * FROM pg_roles WHERE rolname LIKE '%user_name%';
+ALTER USER user_name WITH SUPERUSER;
+
+--command " "\\copy public.country (country_code, country_name) FROM 'C:/Users/KonuTech/PYCHAR~1/TIMEZO~1/ingest/country.csv' DELIMITER ',' CSV ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';""
