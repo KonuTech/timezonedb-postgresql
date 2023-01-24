@@ -11,7 +11,7 @@ ZONE_TIME = open("scripts/sql/dql/zone_time.sql", 'r').read()
 
 
 def menu():
-    zone_name = input("Enter a Zone Name. Press ENTER for default value: America/New_York: ") or 'America/New_York'
+    zone_name = input("Provide a Zone Name.\nPress ENTER for America/New_York.\n") or 'America/New_York'
     if zone_name is not None:
         conn = psycopg2.connect(os.environ["DATABASE_URI"])
         try:
@@ -19,7 +19,7 @@ def menu():
                 with conn.cursor() as cur:
                     like_pattern = '%{}%'.format(zone_name)
                     cur.execute(ZONE_TIME, (like_pattern ,))
-                    print(f"Current Time for provided Zone name: {cur.fetchone()}")
+                    print(f"Current Time for {zone_name}:\n{cur.fetchone()}")
                     cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
