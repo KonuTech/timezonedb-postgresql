@@ -1,4 +1,4 @@
-Computing current time of a time zone using PostgreSQL as backend
+Computing current time of a time zone using remote PostgreSQL db as backend
 
 * Python 3.9
 * local pgAdmin
