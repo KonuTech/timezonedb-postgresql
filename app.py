@@ -19,13 +19,15 @@ def menu():
                 with conn.cursor() as cur:
                     like_pattern = '%{}%'.format(zone_name)
                     cur.execute(ZONE_TIME, (like_pattern ,))
-                    print(f"Current Time for selected Zone name: {cur.fetchone()}")
+                    print(f"Current Time for provided Zone name: {cur.fetchone()}")
                     cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
         finally:
             if conn is not None:
                 conn.close()
+    else:
+        print("Invalid input selected.Please try again.")
 
 
 if __name__ == '__main__':
