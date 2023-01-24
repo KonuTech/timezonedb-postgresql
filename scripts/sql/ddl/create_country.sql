@@ -1,7 +1,5 @@
 -- Table: public.country
 
-DROP TABLE IF EXISTS public.country;
-
 CREATE TABLE IF NOT EXISTS public.country
 (
     country_code character(2) COLLATE pg_catalog."default",

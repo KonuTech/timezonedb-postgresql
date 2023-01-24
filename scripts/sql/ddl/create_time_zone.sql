@@ -1,7 +1,5 @@
 -- Table: public.time_zone
 
-DROP TABLE IF EXISTS public.time_zone;
-
 CREATE TABLE IF NOT EXISTS public.time_zone
 (
     zone_name character varying(35) COLLATE pg_catalog."default" NOT NULL,
