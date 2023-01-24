@@ -17,7 +17,8 @@ def menu():
         try:
             with conn:
                 with conn.cursor() as cur:
-                    cur.execute(ZONE_TIME, (zone_name,))
+                    like_pattern = '%{}%'.format(zone_name)
+                    cur.execute(ZONE_TIME, (like_pattern ,))
                     print(f"Current Time for selected Zone name: {cur.fetchone()}")
                     cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
