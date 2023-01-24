@@ -6,5 +6,5 @@
 > 
 > Press ENTER for default value 'America/New_York':
 > 
-> Current Time for selected Zone name: ('2023-01-24 08:26:53',)
+> Current Time for selected Zone Name: ('2023-01-24 08:26:53',)
 

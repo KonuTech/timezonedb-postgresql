@@ -7,10 +7,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+ZONE_NAME_PROMPT = input(
+    """
+        Enter a Zone Name.
+        Press ENTER for default value: America/New_York:
+    """
+)
+
+
 CURRENT_TIME = open("scripts/sql/dql/current_time.sql", 'r').read()
-ZONE_NAME_PROMPT = input("""Enter a Zone Name.
-Press ENTER for default value: America/New_York:
-""")
 
 
 def current_time(zone_name='America/New_York'):
