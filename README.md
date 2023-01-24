@@ -4,7 +4,7 @@ Computing current time of a time zone using remote PostgreSQL db as backend
 * local pgAdmin
 * free instance of remote PostgreSQL db: https://www.elephantsql.com/
 
-
+1
 
     python app.py
     
@@ -15,6 +15,7 @@ Computing current time of a time zone using remote PostgreSQL db as backend
     Current Time for America/New_York:
     ('2023-01-24 11:19:38',)
 
+2
 
 
     python app.py
