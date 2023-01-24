@@ -1,6 +1,9 @@
-### Python 3.9
-### local pgAdmin
-### free instance of remote PostgreSQL db: https://www.elephantsql.com/
+Computing current time of a time zone using PostgreSQL as backend
+
+* Python 3.9
+* local pgAdmin
+* free instance of remote PostgreSQL db: https://www.elephantsql.com/
+
 
     > python app.py
     Provide a Zone Name.
